@@ -3,9 +3,12 @@ package capstone.manager.security;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
 import capstone.manager.models.AppUser;
+import jakarta.annotation.PostConstruct;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.stereotype.Component;
 
+import java.nio.charset.StandardCharsets;
 import java.security.Key;
 import java.util.List;
 import java.util.Date;
@@ -15,7 +18,15 @@ import java.util.List;
 public class JwtConvert {
 
     // 1. Signing key
-    private Key key = Keys.secretKeyFor(SignatureAlgorithm.HS256);
+    @Value("${jwt.secret}")
+    private String jwtSecretString;
+
+    private Key key;
+
+    @PostConstruct
+    public void init() {
+        this.key = Keys.hmacShaKeyFor(jwtSecretString.getBytes(StandardCharsets.UTF_8));
+    }
     // 2. "Configurable" constants
     private final String ISSUER = "character-sheet-api";
     private final int EXPIRATION_MINUTES = 15;
