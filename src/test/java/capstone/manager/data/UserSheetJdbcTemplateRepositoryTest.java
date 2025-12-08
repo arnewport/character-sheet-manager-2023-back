@@ -14,8 +14,6 @@ import java.util.List;
 import static capstone.manager.TestHelper.makeUserSheet;
 import static org.junit.jupiter.api.Assertions.*;
 
-
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE)
 public class UserSheetJdbcTemplateRepositoryTest extends BaseTestConfig {
 
     @Autowired

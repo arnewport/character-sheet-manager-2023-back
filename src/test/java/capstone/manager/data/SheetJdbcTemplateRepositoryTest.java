@@ -11,7 +11,6 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import static capstone.manager.TestHelper.makeSheet;
 import static org.junit.jupiter.api.Assertions.*;
 
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE)
 public class SheetJdbcTemplateRepositoryTest extends BaseTestConfig {
 
     @Autowired
