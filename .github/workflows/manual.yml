@@ -50,9 +50,9 @@ jobs:
 
       - name: Build and run tests
         env:
-          SPRING_DB_URL: jdbc:mysql://127.0.0.1:3306/testdb
-          SPRING_DB_USERNAME: root
-          SPRING_DB_PASSWORD: password
+          DB_URL: jdbc:mysql://127.0.0.1:3306/testdb
+          DB_USERNAME: root
+          DB_PASSWORD: password
         run: mvn -B clean verify
 
       - name: Install Flyctl
