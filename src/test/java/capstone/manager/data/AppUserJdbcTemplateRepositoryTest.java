@@ -1,5 +1,6 @@
 package capstone.manager.data;
 
+import capstone.manager.BaseTestConfig;
 import capstone.manager.models.AppUser;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -13,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.List;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE)
-public class AppUserJdbcTemplateRepositoryTest {
+public class AppUserJdbcTemplateRepositoryTest extends BaseTestConfig {
 
     @Autowired
     JdbcTemplate jdbcTemplate;

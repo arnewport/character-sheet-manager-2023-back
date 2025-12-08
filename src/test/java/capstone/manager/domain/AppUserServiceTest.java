@@ -1,5 +1,6 @@
 package capstone.manager.domain;
 
+import capstone.manager.BaseTestConfig;
 import capstone.manager.data.AppUserRepository;
 import capstone.manager.models.AppUser;
 import org.junit.jupiter.api.Test;
@@ -17,7 +18,7 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE)
-public class AppUserServiceTest {
+public class AppUserServiceTest extends BaseTestConfig {
 
     @MockBean
     AppUserRepository repository;

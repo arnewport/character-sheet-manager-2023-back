@@ -1,5 +1,6 @@
 package capstone.manager.domain;
 
+import capstone.manager.BaseTestConfig;
 import capstone.manager.data.SheetRepository;
 import capstone.manager.models.Sheet;
 import org.junit.jupiter.api.Test;
@@ -14,7 +15,7 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE)
-public class SheetServiceTest {
+public class SheetServiceTest extends BaseTestConfig {
 
     @Autowired
     SheetService service;
