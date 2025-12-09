@@ -54,6 +54,7 @@ jobs:
           DB_URL: jdbc:mysql://127.0.0.1:3306/testdb
           DB_USERNAME: root
           DB_PASSWORD: password
+          JWT_SECRET: "test-secret-value"
         run: mvn -B clean verify
 
       - name: Install Flyctl
