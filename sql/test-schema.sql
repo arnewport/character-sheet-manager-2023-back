@@ -1,6 +1,6 @@
-drop database if exists character_sheet_test;
-create database character_sheet_test;
-use character_sheet_test;
+--drop database if exists character_sheet_test;
+--create database character_sheet_test;
+--use character_sheet_test;
 
 -- tables
 create table sheet (
